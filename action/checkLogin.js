@@ -1,16 +1,17 @@
+import { getUserByEmail } from '@/lib/prisma';
+var bcrypt = require('bcryptjs');
+/* import bcrypt from 'bcrypt'; */
 
-/* export default function checkLogin(request) {
-    console.log({request});
-    return (
-    <div>checkLogin</div>
-  )
-} */
-
-const checkLogin = async (email, password) => {
-  // Example user verification logic
-  if (email === 'test@example.com' && password === 'password') {  
-    console.log("Called");
-      /* return { id: 1, name: 'Test User', email: 'test@example.com' }; */
+async function checkLogin(email, password) {
+  const user = await getUserByEmail(email);
+  if (user) {
+    const match = await bcrypt.compare(password, user?.password);
+    if (match) {
+      return user;
+    }
+    return null;
   }
   return null;
-};
+}
+
+export default checkLogin;

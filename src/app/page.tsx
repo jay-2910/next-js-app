@@ -1,12 +1,9 @@
-import Link from "next/link";
+import Header from "../../components/header"
 
 export default function Home() {
   return (
     <main>
-      <Link href="/login" className="d-block">Login</Link>
-      <br />
-      <br />
-      <Link href="/userlist">User List</Link>
+      <Header />
     </main>
   );
 }
