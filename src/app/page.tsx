@@ -5,6 +5,7 @@ import TopHeader from "@/components/TopHeader";
 import HomeEvent from "@/components/HomeEvent";
 import HomeBlog from "@/components/HomeBlog";
 import Footer from "@/components/Footer";
+import HomeNewsSection from "@/components/HomeNewsSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <HomeNoteBlock />
       <HomeBlog />
       <HomeEvent />
+      <HomeNewsSection />
       <Footer />
     </main>
   );

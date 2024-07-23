@@ -21,7 +21,7 @@ function formatDate(dateString) {
 
 const HomeBlog = () => {
     const [loading, setLoading] = useState(true);
-    const [blogs, setBlogs] = useState(true);
+    const [blogs, setBlogs] = useState('');
 
     Fancybox.bind("[data-fancybox='blog-gallery']", {});
     useEffect(() => {

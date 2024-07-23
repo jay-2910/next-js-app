@@ -99,3 +99,16 @@ export async function getBlogs() {
         return [];
     }
 }
+export async function getNews() {
+    try {
+        const response = await axios.get(`${backUrl}/news`, {        
+            headers: {
+                'random_number': random_number
+            }
+        });
+        return response.data.news;
+    } catch (error) {
+        console.error("Error fetching news data:", error);
+        return [];
+    }
+}
