@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import checkLogin from "../../../../../action/checkLogin";
+import checkLogin from "../../../../action/checkLogin";
 
 const authOptions = {
     providers: [

@@ -26,6 +26,7 @@ export async function getUserByEmail(email) {
     } catch (e) { }
     return null;
 }
+
 export async function getAllSettings() {
     try {
         const settings = await prisma.settings.findMany({
